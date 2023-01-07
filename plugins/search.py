@@ -47,7 +47,7 @@ from . import async_searcher, con, eod, fast_download, get_string, ultroid_cmd
 
 
 @ultroid_cmd(
-    pattern="github (.*)",
+    pattern="جيثهاب (.*)",
 )
 async def gitsearch(event):
     usrname = event.pattern_match.group(1).strip()
@@ -71,24 +71,24 @@ async def gitsearch(event):
     except BaseException:
         return await event.eor(get_string("srch_2"))
     fullusr = f"""
-**[GITHUB]({ulink})**
-**Name** - {uacc}
-**UserName** - {uname}
-**ID** - {uid}
-**Company** - {ucomp}
-**Blog** - {ublog}
-**Location** - {ulocation}
-**Bio** - {ubio}
-**Repos** - {urepos}
-**Followers** - {ufollowers}
-**Following** - {ufollowing}
+**[رابط الحساب]({ulink})**
+**الاسم** - {uacc}
+**معرف الحساب** - {uname}
+**الايدي** - {uid}
+**الشركة** - {ucomp}
+**المذكرة** - {ublog}
+**الموقع** - {ulocation}
+**بايو** - {ubio}
+**المشاريع** - {urepos}
+**المتابعون** - {ufollowers}
+**الي يتابعهم** - {ufollowing}
 """
     await event.respond(fullusr, file=upic)
     await event.delete()
 
 
 @ultroid_cmd(
-    pattern="google( (.*)|$)",
+    pattern="كوكل( (.*)|$)",
     manager=True,
 )
 async def google(event):
@@ -104,12 +104,12 @@ async def google(event):
         text = res["title"]
         url = res["link"]
         des = res["description"]
-        out += f" 👉🏻  [{text}]({url})\n`{des}`\n\n"
+        out += f" نتائج بحثك الي محد مهتمله👉  [{text}]({url})\n`{des}`\n\n"
     omk = f"**Google Search Query:**\n`{inp}`\n\n**Results:**\n{out}"
     await x.eor(omk, link_preview=False)
 
 
-@ultroid_cmd(pattern="img( (.*)|$)")
+@ultroid_cmd(pattern="صورة( (.*)|$)")
 async def goimg(event):
     query = event.pattern_match.group(1).strip()
     if not query:
@@ -139,7 +139,7 @@ async def goimg(event):
     await nn.delete()
 
 
-@ultroid_cmd(pattern="reverse$")
+@ultroid_cmd(pattern="يعكس$")
 async def reverse(event):
     reply = await event.get_reply_message()
     if not reply:
@@ -188,7 +188,7 @@ async def reverse(event):
 
 
 @ultroid_cmd(
-    pattern="saavn( (.*)|$)",
+    pattern="سافان( (.*)|$)",
 )
 async def siesace(e):
     song = e.pattern_match.group(1).strip()
