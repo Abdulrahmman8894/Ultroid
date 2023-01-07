@@ -25,7 +25,7 @@ from . import get_string, requests, ultroid_cmd
 
 
 @ultroid_cmd(
-    pattern="yt(a|v|sa|sv) ?(.*)",
+    pattern="يوتيوب ?(.*)",
 )
 async def download_from_youtube_(event):
     ytd = {
