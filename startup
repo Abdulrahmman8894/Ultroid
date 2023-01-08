@@ -6,7 +6,7 @@
 # PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
-echo"--جار بدء سورس ريبثون--"
+echo "--جار بدء سورس ريبثون--"
 
 "
 if [ -f .env ] ; then  set -o allexport; source .env; set +o allexport ; fi
