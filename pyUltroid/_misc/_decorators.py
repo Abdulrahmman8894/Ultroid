@@ -165,24 +165,24 @@ def ultroid_cmd(
                 LOGS.exception(e)
                 date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
                 naam = get_display_name(chat)
-                ftext = "**Ultroid Client Error:** `Forward this to` @UltroidSupportChat\n\n"
-                ftext += "**Py-Ultroid Version:** `" + str(pyver)
-                ftext += "`\n**Ultroid Version:** `" + str(ult_ver)
-                ftext += "`\n**Telethon Version:** `" + str(telever)
-                ftext += f"`\n**Hosted At:** `{HOSTED_ON}`\n\n"
-                ftext += "--------START ULTROID CRASH LOG--------"
-                ftext += "\n**Date:** `" + date
-                ftext += "`\n**Group:** `" + str(ult.chat_id) + "` " + str(naam)
-                ftext += "\n**Sender ID:** `" + str(ult.sender_id)
-                ftext += "`\n**Replied:** `" + str(ult.is_reply)
-                ftext += "`\n\n**Event Trigger:**`\n"
+                ftext = "**تقرير خطأ ريبثون:** `يمكنك الابلاغ هنا👉` @Repthon_support\n\n"
+                ftext += "**اصدار py ريبثون:** `" + str(pyver)
+                ftext += "`\n**اصدار ريبثون:** `" + str(ult_ver)
+                ftext += "`\n**اصدار التليثون:** `" + str(telever)
+                ftext += f"`\n**الاستضافة:** `{HOSTED_ON}`\n\n"
+                ftext += "--------بداية المشكلة--------"
+                ftext += "\n**الوقت:** `" + date
+                ftext += "`\n**ايدي الكروب:** `" + str(ult.chat_id) + "` " + str(naam)
+                ftext += "\n**ايدي المرسل:** `" + str(ult.sender_id)
+                ftext += "`\n**الرد:** `" + str(ult.is_reply)
+                ftext += "`\n\n**وقت الرد:**`\n"
                 ftext += str(ult.text)
                 ftext += "`\n\n**Traceback info:**`\n"
                 ftext += str(format_exc())
                 ftext += "`\n\n**Error text:**`\n"
                 ftext += str(sys.exc_info()[1])
-                ftext += "`\n\n--------END ULTROID CRASH LOG--------"
-                ftext += "\n\n\n**Last 5 commits:**`\n"
+                ftext += "`\n\n--------نهاية المشكلو--------"
+                ftext += "\n\n\n**اخر خمس ملفات تم تعديلها:**`\n"
 
                 stdout, stderr = await bash('git log --pretty=format:"%an: %s" -5')
                 result = stdout + (stderr or "")
@@ -195,7 +195,7 @@ def ultroid_cmd(
                         error_log = await asst.send_file(
                             udB.get_key("LOG_CHANNEL"),
                             file,
-                            caption="**Ultroid Client Error:** `Forward this to` @UltroidSupportChat\n\n",
+                            caption="**تقرير خطأ ريبثون:** `يمكنك الابلاغ هنا👉` @Repthon_support\n\n",
                         )
                 else:
                     error_log = await asst.send_message(
@@ -204,7 +204,7 @@ def ultroid_cmd(
                     )
                 if ult.out:
                     await ult.edit(
-                        f"<b><a href={error_log.message_link}>[An error occurred]</a></b>",
+                        f"<b><a href={error_log.message_link}>[اوبس هناك خطا😢]</a></b>",
                         link_preview=False,
                         parse_mode="html",
                     )
@@ -273,7 +273,7 @@ def ultroid_cmd(
                 except Exception as er:
                     if chat := udB.get_key("MANAGER_LOG"):
                         text = f"**#MANAGER_LOG\n\nChat:** `{get_display_name(ult.chat)}` `{ult.chat_id}`"
-                        text += f"\n**Replied :** `{ult.is_reply}`\n**Command :** {ult.text}\n\n**Error :** `{er}`"
+                        text += f"\n**الرد :** `{ult.is_reply}`\n**الزر :** {ult.text}\n\n**الخطأ :** `{er}`"
                         try:
                             return await asst.send_message(
                                 chat, text, link_preview=False
