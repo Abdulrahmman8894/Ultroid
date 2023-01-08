@@ -41,7 +41,7 @@ def main():
     if not ultroid_bot.me.bot:
         udB.set_key("OWNER_ID", ultroid_bot.uid)
 
-    LOGS.info("Initialising...")
+    LOGS.info("جار بدء تنزيل...")
 
     ultroid_bot.run_in_loop(autopilot())
 
@@ -89,7 +89,7 @@ def main():
         pass
 
     LOGS.info(
-        f"Took {time_formatter((time.time() - start_time)*1000)} to start •ULTROID•"
+        f"Took {time_formatter((time.time() - start_time)*1000)} to start •𝐑𝐄𝐏𝐓𝐇𝐎𝐍•"
     )
     LOGS.info(suc_msg)
 
