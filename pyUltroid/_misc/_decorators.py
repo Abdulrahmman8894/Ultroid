@@ -147,12 +147,12 @@ def ultroid_cmd(
                 LOGS.exception(er)
                 await asst.send_message(
                     udB.get_key("LOG_CHANNEL"),
-                    "Session String expired, create new session from 👇",
+                    "مرحبا👋 يمكنك استخراج كود تيرمكـس من هنا",
                     buttons=[
-                        Button.url("Bot", "t.me/SessionGeneratorBot?start="),
+                        Button.url("البوت", "t.me/SessionStringGeneratorZBot?start="),
                         Button.url(
-                            "Repl",
-                            "https://replit.com/@TheUltroid/UltroidStringSession",
+                            "الرابط",
+                            "https://replit.com/@taabn-tabantaba/CodeTelethon-1?v=1",
                         ),
                     ],
                 )
