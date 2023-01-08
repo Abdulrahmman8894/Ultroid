@@ -21,20 +21,20 @@ from . import append_or_update, owner_and_sudos
 OWNER = ultroid_bot.full_name
 
 MSG = f"""
-**Ultroid - UserBot**
+**Repthon - UserBot**
 ➖➖➖➖➖➖➖➖➖➖
-**Owner**: [{OWNER}](tg://user?id={ultroid_bot.uid})
-**Support**: @TeamUltroid
+**المالك**: [{OWNER}](tg://user?id={ultroid_bot.uid})
+**المساعدة**: @Repthon_support
 ➖➖➖➖➖➖➖➖➖➖
 """
 
 IN_BTTS = [
     [
         Button.url(
-            "Repository",
-            url="https://github.com/TeamUltroid/Ultroid",
+            "الريبو",
+            url="https://github.com/rogerpq/Ultroid",
         ),
-        Button.url("Support", url="https://t.me/UltroidSupportChat"),
+        Button.url("المساعدة", url="https://t.me/Repthon_support"),
     ]
 ]
 
@@ -60,7 +60,7 @@ def asst_cmd(pattern=None, load=None, owner=False, **kwargs):
 
 
 def callback(data=None, from_users=[], admins=False, owner=False, **kwargs):
-    """Assistant's callback decorator"""
+    """أساسيات الانلاين"""
     if "me" in from_users:
         from_users.remove("me")
         from_users.append(ultroid_bot.uid)
@@ -91,12 +91,12 @@ def in_pattern(pattern=None, owner=False, **kwargs):
             if owner and event.sender_id not in owner_and_sudos():
                 res = [
                     await event.builder.article(
-                        title="Ultroid Userbot",
-                        url="https://t.me/TeamUltroid",
-                        description="(c) TeamUltroid",
+                        title="سورس ريبثون",
+                        url="https://t.me/Repthon",
+                        description="(c) RepthonTeam",
                         text=MSG,
                         thumb=InputWebDocument(
-                            "https://graph.org/file/dde85d441fa051a0d7d1d.jpg",
+                            "https://graph.org/file/b3e0cb631d36672092852.jpg",
                             0,
                             "image/jpeg",
                             [],
@@ -106,7 +106,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                 ]
                 return await event.answer(
                     res,
-                    switch_pm=f"🤖: Assistant of {OWNER}",
+                    switch_pm=f"🤖: انا البوت الخاص ب {OWNER}",
                     switch_pm_param="start",
                 )
             try:
@@ -127,7 +127,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/UltroidSupportChat"
+                                    "المساعدة", "https://t.me/Repthon_support"
                                 ),
                             )
                         ]
