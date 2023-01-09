@@ -70,31 +70,31 @@ def ULTPIC():
 
 buttons = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url(get_string("bot_4"), "t.me/UltroidSupportChat"),
+        Button.url(get_string("bot_3"), "https://github.com/rogerpq/Ultroid"),
+        Button.url(get_string("bot_4"), "t.me/Repthon_support"),
     ]
 ]
 
 # Will move to strings
 alive_txt = """
-The Ultroid Userbot
+سورس ريبثون يعمل بنجاح
 
-  ◍ Version - {}
-  ◍ Py-Ultroid - {}
-  ◍ Telethon - {}
+  ◍ اصدار ريبثون - {}
+  ◍ اصدار Py- ريبثون - {}
+  ◍ اصدار تليثون - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TeamUltroid</b>"
+in_alive = "{}\n\n🌀 <b>اصدار ريبثون -><b> <code>{}</code>\n🌀 <b>اصدار Py- ريبثون -></b> <code>{}</code>\n🌀 <b>اصدار بايثون -></b> <code>{}</code>\n🌀 <b>الوقت -></b> <code>{}</code>\n🌀 <b>البرانج -></b> [ {} ]\n\n• <b>انضم @Repthon</b>"
 
 
-@callback("alive")
+@callback("فحص")
 async def alive(event):
     text = alive_txt.format(ultroid_version, UltVer, __version__)
     await event.answer(text, alert=True)
 
 
 @ultroid_cmd(
-    pattern="alive( (.*)|$)",
+    pattern="فحص( (.*)|$)",
 )
 async def lol(ult):
     match = ult.pattern_match.group(1).strip()
@@ -305,7 +305,7 @@ async def inline_alive(ult):
     await ult.answer(result)
 
 
-@ultroid_cmd(pattern="update( (.*)|$)")
+@ultroid_cmd(pattern="تحديث( (.*)|$)")
 async def _(e):
     xx = await e.eor(get_string("upd_1"))
     if e.pattern_match.group(1).strip() and (
