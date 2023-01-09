@@ -49,7 +49,7 @@ if run_as_module:
         os.remove(file)
 
     HOSTED_ON = where_hosted()
-    LOGS = getLogger("pyUltLogs")
+    LOGS = getLogger("سورس ريبثون")
     TelethonLogger = getLogger("Telethon")
     TelethonLogger.setLevel(INFO)
 
@@ -83,7 +83,7 @@ if run_as_module:
     LOGS.info(
         """
                     -----------------------------------
-                             تم تنصيب سورس ريبثون بنجاح
+                             .جار بدء سورس ريبثون.
                     -----------------------------------
     """
     )
