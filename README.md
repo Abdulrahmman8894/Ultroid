@@ -5,7 +5,7 @@
   <b>Repthon - UserBot</b>
 </h1>
 
-<b>A stable pluggable Telegram userbot + Voice & Video Call music bot, based on Telethon.</b>
+<b>A سورس ريبثون افضل سورس يوزر بوت يدعم السورس ميزة تدعى Vc (وهذه تعني سورس ميوزك اختصار(السورس ممزوج مع سورس ميوزك.</b>
 
 [![](https://img.shields.io/badge/Repthon-v0.7-darkgreen)](#)
 [![Stars](https://img.shields.io/github/stars/TeamUltroid/Ultroid?style=flat-square&color=yellow)](https://github.com/rogerpq/Ultroid/stargazers)
@@ -22,10 +22,10 @@
 [![Sparkline](https://stars.medv.io/rogerpq/Ultroid.svg)](https://stars.medv.io/rogerpq/Ultroid)
 ----
 
-# Deploy
-- [Heroku](#deploy-to-heroku)
-- [Okteto](#deploy-to-okteto)
-- [Local Machine](#deploy-locally)
+# التنصيب
+- [هيروكو](#deploy-to-heroku)
+- [اوكتيتو](#deploy-to-okteto)
+- [لوكال ماجيل](#deploy-locally)
 
 # Documentation 
 [![Documentation](https://img.shields.io/badge/Documentation-Ultroid-blue)](http://ultroid.tech/)
@@ -36,13 +36,13 @@
 - Tutorial to get Redis URL and password - [here.](./resources/extras/redistut.md)
 ---
 
-## Deploy to Heroku
-Get the [Necessary Variables](#Necessary-Variables) and then click the button below!  
+## التنصيب عن طريق هيروكو
+Get the [احصل على الفارات](#Necessary-Variables) and then click the button below!  
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/deploy?https://github.com/rogerpq/Ultroid)
 
-## Deploy to Okteto
-Get the [Necessary Variables](#Necessary-Variables) and then click the button below!
+## التنصيب عن طريق اوكتيتو 
+Get the [احصل على الفارات](#Necessary-Variables) and then click the button below!
 
 [![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/rogerpq/Ultroid)
 
@@ -133,4 +133,4 @@ Ultroid is licensed under [GNU Affero General Public License](https://www.gnu.or
 * [Lonami](https://github.com/LonamiWebs/) for [Telethon.](https://github.com/LonamiWebs/Telethon)
 * [MarshalX](https://github.com/MarshalX) for [PyTgCalls.](https://github.com/MarshalX/tgcalls)
 
-> Made with 💕 by [@TeamUltroid](https://t.me/TeamUltroid).    
+> Made with 💕 by [@Repthon](https://t.me/Repthon).    
