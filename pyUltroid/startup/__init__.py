@@ -83,15 +83,15 @@ if run_as_module:
     LOGS.info(
         """
                     -----------------------------------
-                            Starting Deployment
+                             تم تنصيب سورس ريبثون بنجاح
                     -----------------------------------
     """
     )
 
-    LOGS.info(f"Python version - {platform.python_version()}")
-    LOGS.info(f"py-Ultroid Version - {__pyUltroid__}")
-    LOGS.info(f"Telethon Version - {__version__} [Layer: {LAYER}]")
-    LOGS.info(f"Ultroid Version - {ultroid_version} [{HOSTED_ON}]")
+    LOGS.info(f"اصدار بايثون - {platform.python_version()}")
+    LOGS.info(f"اصدار -py ريبثون - {__pyUltroid__}")
+    LOGS.info(f"اصدار تليثون - {__version__} [Layer: {LAYER}]")
+    LOGS.info(f"اصدار ريبثون - {ultroid_version} [{HOSTED_ON}]")
 
     try:
         from safety.tools import *
