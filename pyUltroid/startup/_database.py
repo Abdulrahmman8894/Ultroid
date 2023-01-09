@@ -172,7 +172,7 @@ class SqlDB(_BaseDatabase):
             )
         except Exception as error:
             LOGS.exception(error)
-            LOGS.info("Invaid SQL Database")
+            LOGS.info("فشل في التعرف على قاعدة البيانات رجاءآ قم بتبديلها")
             if self._connection:
                 self._connection.close()
             sys.exit()
