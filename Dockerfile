@@ -3,7 +3,7 @@
 # This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
-FROM rogerpq/ultroid:main
+FROM theteamultroid/ultroid:main
 
 # set timezone
 ENV TZ=Asia/Baghdad
@@ -14,7 +14,7 @@ COPY installer.sh .
 RUN bash installer.sh
 
 # changing workdir
-WORKDIR "/root/rogerpq"
+WORKDIR "/root/TeamUltroid"
 
 # start the bot.
 CMD ["bash", "startup"]
